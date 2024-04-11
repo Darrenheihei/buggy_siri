@@ -1,0 +1,18 @@
+.Dictaphone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.speakButton {
+    width: 100px;
+    height: 50px;
+    margin: auto;
+    border: 5px none #C0C0C0;
+    border-radius: 10px;
+    background-color: #89B7F9;
+}
+
+.transcript {
+    text-align: center;
+}

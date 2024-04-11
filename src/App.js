@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react"
+import Dictaphone from "./VoiceRecognizer"
+import ConvBlock from "./ConvBlock"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App(){
+    const [conversations, setConversations] = useState([])
+
+    const convBlocks = conversations.map(data => {
+        return <ConvBlock user={data.user} content={data.content} />
+    })
+
+    function AddNewConv(_user, _conv){ // conv means conversation
+        setConversations(prevConv => [...prevConv, {user: _user, content: _conv}])
+    }
+    
+    return (
+        <div>
+            {/* conversation history */}
+            <div className="convContainer">
+                {convBlocks}
+            </div>
+            <Dictaphone AddNewConv={AddNewConv}/>
+        </div>
+    )
 }
-
-export default App;
