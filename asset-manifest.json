@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/buggy_siri/static/css/main.6fa49432.css",
+    "main.js": "/buggy_siri/static/js/main.e2c162eb.js",
+    "index.html": "/buggy_siri/index.html",
+    "main.6fa49432.css.map": "/buggy_siri/static/css/main.6fa49432.css.map",
+    "main.e2c162eb.js.map": "/buggy_siri/static/js/main.e2c162eb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6fa49432.css",
+    "static/js/main.e2c162eb.js"
+  ]
+}
